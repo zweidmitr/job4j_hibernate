@@ -16,15 +16,7 @@ public class HbnRun {
             SessionFactory sf = new MetadataSources(registry).buildMetadata().buildSessionFactory();
             Session session = sf.openSession();
             session.beginTransaction();
-            /*
-            created(session);
-            selectAll(session);
-            selectById(session);
-            selectByName(session);
-            update(session);
-            delete(session);
-            insert(session);
-             */
+
             session.getTransaction().commit();
             session.close();
 
