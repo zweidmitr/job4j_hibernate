@@ -1,22 +1,20 @@
-package hiber.toone;
+package hiber.many;
 
 import javax.persistence.*;
 import java.util.Objects;
-/*
-@Entity
-@Table(name = "j_role")
 
- */
-public class Role {
+@Entity
+@Table(name = "j_user")
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
 
-    public static Role of(String name) {
-        Role role = new Role();
-        role.name = name;
-        return role;
+    public static User of(String name) {
+        User user = new User();
+        user.name = name;
+        return user;
     }
 
     @Override
@@ -27,8 +25,8 @@ public class Role {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        Role role = (Role) o;
-        return id == role.id;
+        User user = (User) o;
+        return id == user.id;
     }
 
     @Override

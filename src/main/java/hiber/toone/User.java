@@ -3,8 +3,10 @@ package hiber.toone;
 import javax.persistence.*;
 import java.util.Objects;
 
+/*
 @Entity
 @Table(name = "j_user")
+ */
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
