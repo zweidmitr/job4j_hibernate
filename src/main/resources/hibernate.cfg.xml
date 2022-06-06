@@ -25,6 +25,8 @@
         <mapping class="hiber.many.Role"/>
         <mapping class="hiber.many.car.Car"/>
         <mapping class="hiber.many.car.Model"/>
+        <mapping class="hiber.manytomany.Person"/>
+        <mapping class="hiber.manytomany.Address"/>
 
     </session-factory>
 </hibernate-configuration>
