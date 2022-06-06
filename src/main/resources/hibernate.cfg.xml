@@ -23,6 +23,8 @@
 <!--        <mapping class="hiber.toone.Role"/>-->
         <mapping class="hiber.many.User"/>
         <mapping class="hiber.many.Role"/>
+        <mapping class="hiber.many.car.Car"/>
+        <mapping class="hiber.many.car.Model"/>
 
     </session-factory>
 </hibernate-configuration>
