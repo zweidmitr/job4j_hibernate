@@ -34,6 +34,16 @@ create table c_model
     id   serial primary key,
     name varchar(255)
 );
+create table books
+(
+    id   serial primary key,
+    name varchar(255)
+);
+create table authors
+(
+    id   serial primary key,
+    name varchar(255)
+);
 
 drop table car cascade;
 drop table c_model cascade;
