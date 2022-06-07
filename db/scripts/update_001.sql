@@ -44,16 +44,24 @@ create table authors
     id   serial primary key,
     name varchar(255)
 );
-
+create table categories
+(
+    id   serial primary key,
+    name varchar(255)
+);
+create table tasks
+(
+    id   serial primary key,
+    description varchar(255)
+);
 drop table car cascade;
 drop table c_model cascade;
 -- drop table car_c_model cascade;
 drop table j_user cascade;
 drop table j_role cascade;
-drop table addresses;
 drop table persons cascade;
 drop table addresses cascade;
--- drop table persons_addresses cascade ;
+drop table persons_addresses cascade ;
 
 -- toone
 --

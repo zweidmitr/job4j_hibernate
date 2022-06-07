@@ -29,6 +29,8 @@
         <mapping class="hiber.manytomany.Address"/>
         <mapping class="hiber.manytomany.books.Book"/>
         <mapping class="hiber.manytomany.books.Author"/>
+        <mapping class="hiber.lazy.Category"/>
+        <mapping class="hiber.lazy.Task"/>
 
     </session-factory>
 </hibernate-configuration>
