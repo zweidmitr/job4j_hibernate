@@ -30,12 +30,12 @@ public class Person {
             return false;
         }
         Person person = (Person) o;
-        return person.id == id && Objects.equals(person.name, name);
+        return person.id == id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name);
+        return Objects.hash(id);
     }
 
     public int getId() {

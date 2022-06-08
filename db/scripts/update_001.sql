@@ -61,7 +61,10 @@ drop table j_user cascade;
 drop table j_role cascade;
 drop table persons cascade;
 drop table addresses cascade;
-drop table persons_addresses cascade ;
+drop table persons_addresses cascade;
+drop table authors cascade ;
+drop table authors_books cascade ;
+drop table books cascade ;
 
 -- toone
 --

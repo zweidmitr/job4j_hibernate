@@ -15,7 +15,7 @@ public class HbmRun {
             Session session = sf.openSession();
             session.beginTransaction();
 
-            delete(session);
+            save(session);
 
             session.getTransaction().commit();
             session.close();
@@ -32,8 +32,8 @@ public class HbmRun {
     }
 
     private static void save(Session session) {
-        Address one = Address.of("Kazanskaya", "1");
-        Address two = Address.of("Piterskaya", "10");
+        Address one = Address.of("Kazanskaya", "1", 1);
+        Address two = Address.of("Piterskaya", "10", 2);
 
         Person first = Person.of("Nikolay");
         first.getAddresses().add(one);

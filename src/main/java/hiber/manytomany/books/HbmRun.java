@@ -15,7 +15,7 @@ public class HbmRun {
             Session session = sf.openSession();
             session.beginTransaction();
 
-            delete(session);
+            save(session);
 
             session.getTransaction().commit();
             session.close();
@@ -32,10 +32,10 @@ public class HbmRun {
     }
 
     private static void save(Session session) {
-        Book one = Book.of("asdf");
-        Book two = Book.of("jkl;");
-        Book three = Book.of("qwert");
-        Book four = Book.of("yuiop[]");
+        Book one = Book.of("asdf", 1);
+        Book two = Book.of("jkl;", 2);
+        Book three = Book.of("qwert", 3);
+        Book four = Book.of("yuiop[]", 4);
 
         Author first = Author.of("Huxley");
         first.getBooks().add(one);

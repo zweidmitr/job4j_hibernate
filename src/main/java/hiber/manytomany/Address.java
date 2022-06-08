@@ -7,15 +7,15 @@ import java.util.Objects;
 @Table(name = "addresses")
 public class Address {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String street;
     private String number;
 
-    public static Address of(String street, String number) {
+    public static Address of(String street, String number, int id) {
         Address address = new Address();
         address.street = street;
         address.number = number;
+        address.id = id;
         return address;
     }
 
@@ -28,7 +28,7 @@ public class Address {
             return false;
         }
         Address address = (Address) o;
-        return address.id == id && Objects.equals(address.street, street);
+        return address.id == id;
     }
 
     @Override

@@ -9,13 +9,13 @@ import java.util.Set;
 @Table(name = "books")
 public class Book {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
 
-    public static Book of(String name) {
+    public static Book of(String name, int id) {
         Book book = new Book();
         book.name = name;
+        book.id = id;
         return book;
     }
 

@@ -30,12 +30,12 @@ public class Author {
             return false;
         }
         Author author = (Author) o;
-        return author.id == id && Objects.equals(author.name, name);
+        return author.id == id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name);
+        return Objects.hash(id);
     }
 
     public int getId() {
