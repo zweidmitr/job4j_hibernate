@@ -39,6 +39,8 @@
         <mapping class="hiber.hql.Account"/>
         <mapping class="hiber.hql.Student"/>
         <mapping class="hiber.hql.Book"/>
+        <mapping class="hiber.hql.VacancyDB"/>
+        <mapping class="hiber.hql.Vacancy"/>
 
     </session-factory>
 </hibernate-configuration>

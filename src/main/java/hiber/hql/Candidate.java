@@ -1,6 +1,7 @@
 package hiber.hql;
 
 import javax.persistence.*;
+import java.security.PrivateKey;
 import java.util.Objects;
 
 @Entity
@@ -12,6 +13,8 @@ public class Candidate {
     private String name;
     private int experience;
     private int salary;
+    @OneToOne(fetch = FetchType.LAZY)
+    private VacancyDB vacancyDB;
 
     public static Candidate of(String name, int experience, int salary) {
         Candidate candidate = new Candidate();
@@ -42,7 +45,16 @@ public class Candidate {
     @Override
     public String toString() {
         return String.format(
-                "Candidate: id= %s, name= %s, experience= %s, salary= %s", id, name, experience, salary);
+                "Candidate: id= %s, name= %s, experience= %s, salary= %s, base= %s",
+                id, name, experience, salary, vacancyDB);
+    }
+
+    public VacancyDB getVacancyDB() {
+        return vacancyDB;
+    }
+
+    public void setVacancyDB(VacancyDB vacancyDB) {
+        this.vacancyDB = vacancyDB;
     }
 
     public int getId() {

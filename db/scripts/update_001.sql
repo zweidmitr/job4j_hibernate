@@ -74,11 +74,27 @@ create table accounts
     username varchar(255),
     active   boolean
 );
-create table books (
-  id serial primary key ,
-  name varchar(255),
-  publishinghouse varchar(255)
+create table books
+(
+    id              serial primary key,
+    name            varchar(255),
+    publishinghouse varchar(255)
 );
+create table vacancies
+(
+    id   serial primary key,
+    name varchar(255)
+);
+create table base
+(
+    id         serial primary key,
+    name       varchar(255),
+    vacancy_id int not null references vacancies (id)
+);
+drop table base_vacancies;
+drop table vacancies cascade;
+drop table base cascade;
+drop table candidates;
 drop table products;
 drop table car cascade;
 drop table c_model cascade;
