@@ -51,9 +51,17 @@ create table categories
 );
 create table tasks
 (
-    id   serial primary key,
+    id          serial primary key,
     description varchar(255)
 );
+create table products
+(
+    id       serial primary key,
+    created  timestamp,
+    name     varchar(255),
+    producer varchar(255)
+);
+drop table products;
 drop table car cascade;
 drop table c_model cascade;
 -- drop table car_c_model cascade;
@@ -62,9 +70,9 @@ drop table j_role cascade;
 drop table persons cascade;
 drop table addresses cascade;
 drop table persons_addresses cascade;
-drop table authors cascade ;
-drop table authors_books cascade ;
-drop table books cascade ;
+drop table authors cascade;
+drop table authors_books cascade;
+drop table books cascade;
 
 -- toone
 --

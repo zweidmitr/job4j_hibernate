@@ -12,6 +12,8 @@
         <property name="hibernate.current_session_context_class">thread</property>
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL10Dialect</property>
+        <property name="hibernate.jdbc.time_zone">Europe/Moscow</property>
+
 
         <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="show_sql">true</property>
@@ -33,6 +35,7 @@
         <mapping class="hiber.lazy.Task"/>
         <mapping class="hiber.lazy.car.Car"/>
         <mapping class="hiber.lazy.car.Model"/>
+        <mapping class="hiber.date.Product"/>
 
     </session-factory>
 </hibernate-configuration>
