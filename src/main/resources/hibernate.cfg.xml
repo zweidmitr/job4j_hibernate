@@ -21,21 +21,24 @@
         <property name="use_sql_comments">true</property>
 
         <mapping class="hiber.hql.Candidate"/>
-<!--        <mapping class="hiber.toone.User"/>-->
-<!--        <mapping class="hiber.toone.Role"/>-->
+        <!--        <mapping class="hiber.toone.User"/>-->
+        <!--        <mapping class="hiber.toone.Role"/>-->
         <mapping class="hiber.many.User"/>
         <mapping class="hiber.many.Role"/>
-<!--        <mapping class="hiber.many.car.Car"/>-->
-<!--        <mapping class="hiber.many.car.Model"/>-->
+        <!--        <mapping class="hiber.many.car.Car"/>-->
+        <!--        <mapping class="hiber.many.car.Model"/>-->
         <mapping class="hiber.manytomany.Person"/>
         <mapping class="hiber.manytomany.Address"/>
-        <mapping class="hiber.manytomany.books.Book"/>
-        <mapping class="hiber.manytomany.books.Author"/>
+<!--        <mapping class="hiber.manytomany.books.Book"/>-->
+<!--        <mapping class="hiber.manytomany.books.Author"/>-->
         <mapping class="hiber.lazy.Category"/>
         <mapping class="hiber.lazy.Task"/>
         <mapping class="hiber.lazy.car.Car"/>
         <mapping class="hiber.lazy.car.Model"/>
         <mapping class="hiber.date.Product"/>
+        <mapping class="hiber.hql.Account"/>
+        <mapping class="hiber.hql.Student"/>
+        <mapping class="hiber.hql.Book"/>
 
     </session-factory>
 </hibernate-configuration>

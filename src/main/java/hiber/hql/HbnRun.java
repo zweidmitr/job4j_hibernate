@@ -10,12 +10,22 @@ import javax.persistence.Query;
 
 public class HbnRun {
     public static void main(String[] args) {
+        Student rsl = null;
+
         final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
                 .configure().build();
         try {
             SessionFactory sf = new MetadataSources(registry).buildMetadata().buildSessionFactory();
             Session session = sf.openSession();
             session.beginTransaction();
+
+            rsl = session.createQuery(
+                            "select distinct st from Student st "
+                                    + " join fetch st.account a "
+                                    + " join fetch a.books b "
+                                    + "where st.id = :sId", Student.class)
+                    .setParameter("sId", 1).uniqueResult();
+            System.out.println(rsl);
 
             session.getTransaction().commit();
             session.close();

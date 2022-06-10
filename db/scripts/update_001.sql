@@ -34,11 +34,11 @@ create table c_model
     id   serial primary key,
     name varchar(255)
 );
-create table books
-(
-    id   serial primary key,
-    name varchar(255)
-);
+-- create table books
+-- (
+--     id   serial primary key,
+--     name varchar(255)
+-- );
 create table authors
 (
     id   serial primary key,
@@ -60,6 +60,24 @@ create table products
     created  timestamp,
     name     varchar(255),
     producer varchar(255)
+);
+create table students
+(
+    id   serial primary key,
+    name varchar(255),
+    age  int,
+    city varchar(255)
+);
+create table accounts
+(
+    id       serial primary key,
+    username varchar(255),
+    active   boolean
+);
+create table books (
+  id serial primary key ,
+  name varchar(255),
+  publishinghouse varchar(255)
 );
 drop table products;
 drop table car cascade;
