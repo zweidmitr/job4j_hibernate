@@ -19,7 +19,7 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
 public class OrdersStoreTest {
-    private static BasicDataSource pool = new BasicDataSource();
+    private  BasicDataSource pool = new BasicDataSource();
 
     @Before
     public void setUp() throws SQLException {
@@ -45,11 +45,6 @@ public class OrdersStoreTest {
              var ps = cn.prepareStatement("drop table orders")) {
             ps.execute();
         }
-    }
-
-    @AfterClass
-    public static void closeConnection() throws SQLException {
-        pool.close();
     }
 
     @Test
